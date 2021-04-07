@@ -6,7 +6,7 @@ function EventsSearch(props) {
     const yearInputRef = useRef();
     const monthInputRef = useRef();
 
-    const submitHandler = (e) => {
+    function submitHandler(e){
         e.preventDefault();
         const selectedYear = yearInputRef.current.value;
         const selectedMonth = monthInputRef.current.value;
@@ -14,7 +14,7 @@ function EventsSearch(props) {
         props.onSearch(selectedYear, selectedMonth)
     }
     return(
-        <form className={classes.form} onClick={submitHandler}>
+        <form className={classes.form} onSubmit={submitHandler}>
             <div className={classes.controls}>
                 <div className={classes.control}>
                     <label htmlFor="year">Year</label>
