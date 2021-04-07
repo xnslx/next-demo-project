@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import classes from './event-item.module.css';
 import Button from '../ui/button';
-import DataIcon from '../icons/data-icon';
+import DateIcon from '../icons/date-icon';
 import AddressIcon from '../icons/address-icon';
 import ArrowRightIcon from '../icons/arrow-right-icon';
 
@@ -25,7 +25,7 @@ function EventItem(props) {
                 <div className={classes.summary}>
                     <h2>{title}</h2>
                     <div className={classes.date}>
-                        <DataIcon />
+                        <DateIcon />
                         <time>{humanReadableDate}</time>
                     </div>
                     <div className={classes.address}>
