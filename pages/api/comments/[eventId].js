@@ -1,5 +1,13 @@
-function handler(req, res) {
+import { MongoClient } from 'mongodb';
+require('dotenv').config();
+
+const dbUrl = process.env.COMMENTS_URL;
+
+
+async function handler(req, res) {
     const eventId = req.query.eventId;
+    const client = await MongoClient.connect(dbUrl);
+
     if (req.method === 'POST') {
         const { email, name, text } = req.body;
         if (!email.includes('@') || !name || name.trim() === '' || !text || text.trim() === '') {
@@ -7,12 +15,15 @@ function handler(req, res) {
             return;
         }
         const newComment = {
-            id: new Date().toISOString(),
             email,
             name,
-            text
+            text,
+            eventId
         }
-        console.log(newComment)
+
+        const db = client.db()
+        const result = await db.collection('comments').insertOne(newComment)
+        console.log(result)
         res.status(201).json({ message: ' Added comment.', comment: newComment })
     }
     if (req.method === 'GET') {
