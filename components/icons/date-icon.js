@@ -5,6 +5,7 @@ function DateIcon() {
       fill='none'
       viewBox='0 0 24 24'
       stroke='currentColor'
+      className="h-6"
     >
       <path
         strokeLinecap='round'
