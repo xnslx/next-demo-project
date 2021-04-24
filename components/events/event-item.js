@@ -21,24 +21,24 @@ function EventItem(props) {
     const exploreLink = `/events/${id}`;
     console.log('explorelink', exploreLink)
     return(
-        <li className={classes.item}>
-            <Image src={'/' + image} alt={title} width={250} height={160}/>
-            <div className={classes.content}>
-                <div className={classes.summary}>
-                    <h2>{title}</h2>
-                    <div className={classes.date}>
-                        <DateIcon />
-                        <time>{humanReadableDate}</time>
+        <li className="grid grid-cols-3 bg-gray-200 mb-8 ml-auto mr-auto w-3/5 h-56 ">
+            <Image src={'/' + image} alt={title} width={250} height={160} className="object-cover h-1"/>
+            <div className="h-56">
+                <div className="">
+                    <h2 className="text-sm bold">{title}</h2>
+                    <div className="">
+                        <DateIcon/>
+                        <time className="text-sm">{humanReadableDate}</time>
                     </div>
-                    <div className={classes.address}>
+                    <div className="">
                         <AddressIcon />
-                        <address>{formattedAddress}</address>
+                        <address className="text-sm">{formattedAddress}</address>
                     </div>
                 </div>
-                <div className={classes.actions}>
-                    <Button link={exploreLink}>
+                <div className="">
+                    <Button link={exploreLink} >
                         <span>Explore Event</span>
-                        <span className={classes.icon}><ArrowRightIcon /></span>
+                        <span><ArrowRightIcon /></span>
                     </Button>
                 </div>
             </div>
