@@ -35,9 +35,9 @@ function EventItem(props) {
                         <address className="text-sm ml-2">{formattedAddress}</address>
                     </div>
                 </div>
-                <div className="flex bg-red-200 -mt-20 w-3/5">
+                <div className="flex flex-row bg-green-600 -mt-20 h-10 ml-2 w-3/5">
                     <Button link={exploreLink} className="">
-                        <span>Explore Event</span>
+                        <span className="align-middle">Explore Event</span>
                         <span><ArrowRightIcon /></span>
                     </Button>
                 </div>
