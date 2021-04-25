@@ -4,7 +4,7 @@ function ArrowRightIcon() {
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 20 20'
       fill='currentColor'
-      className="h-6 ml-4 bg-red-600 inline-block"
+      className="h-6 ml-1 inline-block w-1/5"
     >
       <path
         fillRule='evenodd'
