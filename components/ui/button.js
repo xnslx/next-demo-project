@@ -5,7 +5,7 @@ function Button(props) {
     if(props.link) {
        return(
             <Link href={props.link}>
-                <a className="text-center leading-loose">{props.children}</a>
+                <a className="">{props.children}</a>
             </Link>
        ) 
     }
