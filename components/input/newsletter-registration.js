@@ -50,18 +50,19 @@ function NewsletterRegistration() {
   }
 
   return (
-    <section className={classes.newsletter}>
-      <h2>Sign up to stay updated!</h2>
-      <form onSubmit={registrationHandler}>
-        <div className={classes.control}>
+    <section className="mb-8 w-3/5 ml-auto mr-auto mt-8">
+      <h2 className="text-center font-semibold text-lg mb-4">Sign up to stay updated!</h2>
+      <form onSubmit={registrationHandler} className="w-full mb-16">
+        <div>
           <input
+            className="border h-12 w-4/5 pl-4"
             type='email'
             id='email'
             placeholder='Your email'
             aria-label='Your email'
             ref={emailInputRef}
           />
-          <button>Register</button>
+          <button className="bg-green-500 w-1/5 h-12 text-white">Register</button>
         </div>
       </form>
     </section>

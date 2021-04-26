@@ -25,7 +25,7 @@ function EventItem(props) {
             <Image src={'/' + image} alt={title} width={250} height={160} className="object-cover"/>
             <div className="h-56">
                 <div className="h-56">
-                    <h2 className="text-lg mb-4 bold">{title}</h2>
+                    <h2 className="text-lg mb-4 font-medium">{title}</h2>
                     <div className="flex pb-2">
                         <DateIcon />
                         <time className="text-sm ml-2">{humanReadableDate}</time>
